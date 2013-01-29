@@ -1,0 +1,11 @@
+const_cast<T>(e)
+Casts away the const-ness of objects, variables or pointers. 
+It gives an error when the types differ more than in const and volatile modifiers.
+
+Don't use this to cast away const-ness of objects that were originally defined as being const
+(such things as char*s = "some hard coded string in code/text segment") 
+and on which non-const operations are being executed. Doing this, results in undefined behaviour.
+
+You typically use this when you need to access an api that incorrectly defines a function signature. 
+When you are 100% sure that the function you want to call doesn't perform non-const operations on the argument, 
+you can safely cast away the const-ness of the argument that was initially defined as being const.
