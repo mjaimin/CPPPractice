@@ -1,1 +1,6 @@
 Protected vs Private Destructor
+What happens During Virtual Inheritance
+what is the need of copy constructor if = operator is overloaded
+what to do to prevent inheritance
+what is the use of explicit constructor
+What is object slicing? how to prevent
