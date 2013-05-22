@@ -1,3 +1,4 @@
 http://www.geeksforgeeks.org/category/c-puzzles/
 http://www.geeksforgeeks.org/c-plus-plus/
 http://www.parashift.com/c++-faq-lite/dyn-binding.html
+http://www.coolinterview.com/type.asp?iType=41
