@@ -6,3 +6,4 @@ what is the use of explicit constructor
 What is object slicing? how to prevent
 difference between functor and function object
 difference between function templet and templet function
+who gets called first new operator or constructor
