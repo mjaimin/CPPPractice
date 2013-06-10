@@ -7,3 +7,8 @@ What is object slicing? how to prevent
 difference between functor and function object
 difference between function templet and templet function
 who gets called first new operator or constructor
+
+
+
+
+When a derived object is being constructed, before the body of the derived class constructor is called the base class constructor must complete. Before the derived class constructor is called the dynamic type of the object under construction is a base class instance and not a derived class instance. For this reason, when you call a virtual function from a constructor, only the base class virtual function overrides can be called.
