@@ -26,7 +26,7 @@ public:
 int main()
 {
 	Base MyBaseObject = Sub();
-	//Base* MyBaseObject = new Sub();
+	//Base* MyBaseObject = new Sub(); //both same
 }
 
 /*
