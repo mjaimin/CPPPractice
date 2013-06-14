@@ -1,0 +1,11 @@
+Q->Under what circumstances are C++ destructors not going to be called?
+
+1.Long jumps: these interfere with the natural stack unwinding process and often lead to undefined behavior in C++.
+2.inPremature exits (you already pointed these out, though it's worth noting that throwing while already stack unwinding as a result of an exception being thrown leads to undefined behavior and this is why we should never throw out of dtors)
+3.dtorsThrowing from a constructor does not invoke the dtor for a class. This is why, if you allocate multiple memory blocks managed by several different pointers (and not smart pointers) in a ctor, you need to use function-level try blocks or avoid using the initializer list and have a try/catch block in the ctor body (or better yet, just use a smart pointer like scoped_ptr since any member successfully initialized so far in an initializer list will be destroyed even though the class dtor will not be called).
+4.calledAs pointed out, failing to make a dtor virtual when a class is deleted through a base pointer could fail to invoke the subclass dtors (undefined behavior).
+5.behaviorFailing to call matching operator delete/delete[] for an operator new/new[] call (undefined behavior - may fail to invoke dtor).
+6.dtorFailing to manually invoke the dtor when using placement new with a custom memory allocator in the deallocate section.
+7.sectionUsing functions like memcpy which only copies one memory block to another without invoking copy ctors. mem* functions are deadly in C++ as they bulldoze over the private data of a class, overwrite vtables, etc. The result is typically undefined behavior.
+8.behaviorInstantiation of some of smart pointers (auto_ptr) on an incomplete type, see this discussion
+
