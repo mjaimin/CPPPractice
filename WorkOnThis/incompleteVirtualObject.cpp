@@ -2,7 +2,6 @@
 class Base
 {
 public:
-	virtual void parse()=0;
 	virtual void hello()
 	{
 		std::cout << "Base::hello" << std::endl;
@@ -18,10 +17,6 @@ Base::Base()
 class Sub: public Base
 {
 public:
-	void parse()
-	{
-		std::cout << "Sub::parse" << std::endl;
-	}
 	void hello()
 	{
 		std::cout << "Sub::hello" << std::endl;
@@ -30,12 +25,11 @@ public:
 
 int main()
 {
-	Base *MyBaseObject = new Sub();
-	MyBaseObject->parse();
+	Base MyBaseObject = Sub();
+	//Base* MyBaseObject = new Sub();
 }
 
 /*
 Base::Base
 Base::hello
-Sub::parse
 */
