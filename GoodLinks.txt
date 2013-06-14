@@ -5,3 +5,4 @@ http://www.coolinterview.com/type.asp?iType=41
 http://www.newty.de/fpt/fpt.html
 http://www.parashift.com/c++-faq/calling-virtuals-from-base.html
 https://www.securecoding.cert.org/confluence/dashboard.action
+http://www.gotw.ca/publications/mill18.htm
