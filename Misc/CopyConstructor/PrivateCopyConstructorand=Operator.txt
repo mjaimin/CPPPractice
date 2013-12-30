@@ -1,0 +1,3 @@
+Que: Use private copy constructor and assignment operator to avoid object copying
+
+ANS: If you don't want users of your class to be able to assign objects of its type (password string objects are a good example), you can declare a private assignment operator and copy constructor. Please note that the compiler-synthesized copy constructor and assignment operator are public, therefore, you have to define them explicitly as private members in this case.
