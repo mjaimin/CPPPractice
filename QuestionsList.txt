@@ -12,3 +12,7 @@ who gets called first new operator or constructor
 
 
 When a derived object is being constructed, before the body of the derived class constructor is called the base class constructor must complete. Before the derived class constructor is called the dynamic type of the object under construction is a base class instance and not a derived class instance. For this reason, when you call a virtual function from a constructor, only the base class virtual function overrides can be called.
+
+
+Volatile:
+A volatile location is one that can be changed by code the compiler doesn't know about (e.g. some kernel-level driver), so the compiler knows not to optimize e.g. register assignment of that value under the invalid assumption that the value "cannot possibly have changed" since it was last loaded in that register. 
