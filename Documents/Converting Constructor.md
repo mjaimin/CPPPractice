@@ -25,12 +25,14 @@ class Test
   public:
     int x;
     int y;
-//    Test(int i, int j=1)
-    explicit Test(int i, int j=1)
+    int z;
+    //    Test(int i, int j=1)
+    explicit Test(int i, int j=1, int k=2 )
     {
       std::cout << "This is Converting Constructor" << std::endl;
       x = i;
       y = j;
+      z = k;
     }
 
 };
@@ -39,6 +41,7 @@ void show( Test obj )
 {
   std::cout << obj.x << std::endl;
   std::cout << obj.y << std::endl;
+  std::cout << obj.z << std::endl;
 }
 
 Test Create(int i, int j)
@@ -58,7 +61,7 @@ int main()
 
   //Error: if constructor defined as explicit
   show(60);// Non desirable case`
-  Test tp = Create(4,5);
+  Test tp = Create(4,5); // Non desirable case`
   show(tp);
 }
 
