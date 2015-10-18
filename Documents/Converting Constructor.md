@@ -26,7 +26,7 @@ class Test
     int x;
     int y;
     int z;
-    //    Test(int i, int j=1)
+    //    Test(int i, int j=1, int k=2 )
     explicit Test(int i, int j=1, int k=2 )
     {
       std::cout << "This is Converting Constructor" << std::endl;
