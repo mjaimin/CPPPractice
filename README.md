@@ -41,6 +41,7 @@ Ace can be easily embedded into any existing web page. You can either use one of
 The easiest version is simply:
 
 ```html
+<html>
 <h2>Introduction</h2>
 
 <p>What the article/code snippet does, why it&#39;s useful, the problem it solves etc.</p>
@@ -305,6 +306,7 @@ The easiest version is simply:
 
 <p>Keep a running update of any changes or improvements you&#39;ve made here.</p>
 
+</html>
 ```
 
 With "editor" being the id of the DOM element, which should be converted to an editor. Note that this element must be explicitly sized and positioned `absolute` or `relative` for Ace to work. e.g.
