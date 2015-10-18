@@ -26,7 +26,7 @@ class Test
     int x;
     int y;
     int z;
-    //    Test(int i, int j=1, int k=2 )
+    //    Test(int i, int j=1)
     explicit Test(int i, int j=1, int k=2 )
     {
       std::cout << "This is Converting Constructor" << std::endl;
@@ -52,16 +52,15 @@ Test Create(int i, int j)
 
 int main()
 {
-  Test t(20);
+  Test t(20);// OK with Explicit constructor
+  Test q = Test(21);// OK with Explicit constructor
 
-  //Error: if constructor defined as explicit
-  t = 30; // conversion constructor is called here.
-  show(t);//desirable case
-  show(Test(40));//Also a desirable case
+  t = 30; // illigal with explicit
+  show(t);// OK with Explicit constructor
+  show(Test(40));// OK with Explicit constructor
 
-  //Error: if constructor defined as explicit
-  show(60);// Non desirable case`
-  Test tp = Create(4,5); // Non desirable case`
+  show(60);// illigal with explicit
+  Test tp = Create(4,5); // Non desirable case
   show(tp);
 }
 
