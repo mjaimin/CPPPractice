@@ -1,5 +1,3 @@
-//when you want to declare a const object, but you want to change member variable at run time, use mutable
-//Sometimes there is requirement to modify one or more data members of class / struct through const function even though you don’t want the function to update other members of class / struct. This task can be easily performed by using mutable keyword 
 class A
 {
 public:
