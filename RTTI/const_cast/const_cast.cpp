@@ -1,3 +1,4 @@
+//You typically use this when you need to access an api that incorrectly defines a function signature. 
 #include <iostream>
 using namespace std;
 
