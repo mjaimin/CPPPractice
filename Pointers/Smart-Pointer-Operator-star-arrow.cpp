@@ -15,10 +15,9 @@ class Student {
     std::string Name;
     public:
     Student( std::string name ): Name(name)
-    { std::cout << Name << " Object Created" << std::endl; }
+    { std::cout << " Object Created" << std::endl; }
 
-    ~Student() 
-    { std::cout << Name << " Object Destructed" << std::endl; }
+    ~Student(){} 
 
     std::string getName() { return Name; }
 };
