@@ -1,4 +1,6 @@
-//An object's this pointer is not part of the object itself; it is not reflected in the result of a sizeof statement on the object. Instead, when a nonstatic member function is called for an object, the address of the object is passed by the compiler as a hidden argument to the function. For example, the following function call:
+//An object's this pointer is not part of the object itself; it is not reflected in the result of a sizeof statement on the object. 
+//Instead, when a nonstatic member function is called for an object, the address of the object is passed by the compiler as a 
+//hidden argument to the function. For example, the following function call:
 //myDate.setMonth( 3 );
 //can be interpreted this way:
 //setMonth( &myDate, 3 );// this is always a const pointer; it cannot be reassigned.
