@@ -1,18 +1,3 @@
-//Makes it possible to safely downcast pointers and references to base classes.
-//It thus returns the appropriate sub-object in the hierarchy chain. 
-//It returns 0 if this cast wasn't possible on pointers and throws the bad_cast exception if the cast wasn't possible on references.
-//This effectively says "convert this Object into a Penguin or give me 0 if its not an Penguin,".
-//This provides dynamic typing, you don't know what will happen until run-time.
-
-//
-//class B { /* at least one virtual function */ };
-//class D : public B { /* ... */ };
-//        
-//B* p_b1 = new B;
-//B* p_b2 = new D;
-//        
-//                          D* p_d1 = dynamic_cast<D*>(p_b1);       /* will be 0 */
-//                          D* p_d2 = dynamic_cast<D*>(p_b2);       /* will be an object of type D* */
 #include <cstdio>
 #include <iostream>
 #include <typeinfo>
