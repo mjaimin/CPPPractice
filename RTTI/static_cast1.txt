@@ -1,4 +1,4 @@
 static_cast<T>(e)
 This is very similar to the old C-style casts. 
-Only use it when none of the other cast seem to fit the bill. 
 It will only succeed if there's an implicit conversion possible either from T to the type of e, or from the type of e to T.
+This should be used if you know that you refer to an object of a specific type, and thus a check would be unnecessary
