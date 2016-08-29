@@ -1,0 +1,4 @@
+to cast an object, dynamic_cast performs run time type identification.
+When you attempt to do a cast using the dynamic_cast operator, a run time check is made to see if this is a safe cast,
+and if the cast is unsafe then this the cast returns NULL. Thus by checking for NULL, we can determine whether the cast
+attempt was successful or not.
