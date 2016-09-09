@@ -14,3 +14,10 @@ int main()
     std::cout << "str1 after copy:" << str1 << std::endl;
 	std::cout << "str2 after copy:" << str2 << std::endl;
 }
+
+/*
+str1 before copy:Hello
+str2 before copy:
+str1 after copy:
+str2 after copy:Hello
+*/
